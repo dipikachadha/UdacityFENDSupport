@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(7, 147, 182);
+    color: white;
+}
+
+main {
+    flex: 2;
+}
+
+section {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+#results {
+    border: 1px dotted #2a0568;
+    min-height: 25vh;
+    color: white;
+}

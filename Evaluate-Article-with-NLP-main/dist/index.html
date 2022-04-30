@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+     <link href="main.css" rel="stylesheet"></head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                Logo
+            </div>
+            <div class="navigation">
+                navigation
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <form class="Input" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value="" onblur="" placeholder="Enter URL"> <!--onBlur() removed to stop error messages-->
+                    <input id="submit" type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <strong>Form Results:</strong>
+                <div id="results">
+                    <div id="model"></div>
+                    <div id="score_tag"></div>
+                    <div id="agreement"></div>
+                    <div id="subjectivity"></div>
+                    <div id="confidence"></div>
+                    <div id="irony"></div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            <div id="copyright">The starter code and instructions for completing this project were courtesy of Udacity.com</div>
+            <div id="api-credit">The Natural Language Processing API is courtesy of <a href="https://www.meaningcloud.com/developer/sentiment-analysis">MeaningCloud</a></div>
+        </footer>
+
+        <!--
+            Reference: 
+            Lesson 4-8: https://classroom.udacity.com/nanodegrees/nd0011/parts/cd0430/modules/c73f80be-8f45-406d-a709-8123a69e6d52/lessons/722ecfe4-3174-4a6e-8638-ea0ab8eb49ac/concepts/d8172904-6de9-4216-86e9-8b5a093d50aa
+        -->
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    <script type="text/javascript" src="main.js"></script></body>
+</html>
